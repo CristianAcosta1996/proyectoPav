@@ -57,5 +57,17 @@ public class Participacion {
 		this.perfil = perfil;
 	}
 
-	
+	public boolean equals(Object obj) {
+		if(this == obj) {
+			return true;
+		}
+		
+		if(!(obj instanceof Participacion)) {
+			return false;
+		}
+		
+		Participacion participacion = (Participacion) obj;
+		
+		return this.id == participacion.id;
+	}
 }
